@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Response>
+<Say voice="alice">
+Thanks for the call. Go to PosDiff dot com for more information.
+</Say>
+<Pause length="1"/>
+<Say voice="alice">
+Let us know if we can help you in any way during your development.
+</Say>
+<Pause length="2"/>
+<Say voice="alice">
+Goodbye.</Say>
+</Response>
