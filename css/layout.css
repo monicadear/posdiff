@@ -225,18 +225,21 @@ ul#nav li.current a { color: #1E732D; }
 /* messenger or sms */
 
 #connectmethods {
-  width: 435px;
-  margin: 0 auto;
+  display: block;
+  clear: both;
+  width: 520px;
+  border: 1px solid blue;
+  margin: 0 auto 0 auto;
 }
 
 .fb-message-button {
+display: inline-block;
 background:#fff;
-float:right;
 width:172px;
 font-size:14px;
 text-align:right;
 color:#0084ff;
-margin:6px 10px 10px 10px;
+margin:6px 5px 5px 5px;
 padding:10px 10px 12px 5px;
 border-radius:3px;
 background-image:url("../images/messengerlogo.png");
@@ -254,13 +257,13 @@ border: 1px solid #0080ff;
 
 
 .send-a-text-button {
+display: inline-block;
 background:#fff;
-float:right;
-width:172px;
+width:132px;
 font-size:14px;
 text-align:right;
 color:#0084ff;
-margin:6px 10px 10px 10px;
+margin:6px 5px 5px 5px;
 padding:10px 10px 12px 5px;
 border-radius:3px;
 background-image:url("../images/sms.png");
@@ -276,6 +279,29 @@ border: 1px solid #000;
   text-decoration: none;
 }
 
+
+.quicksignup-button {
+display: inline-block;
+background:#fff;
+width:112px;
+font-size:14px;
+text-align:right;
+color:#773f9b;
+margin:6px 5px 5px 5px;
+padding:10px 10px 12px 5px;
+border-radius:3px;
+background-image:url("../images/signupme.png");
+background-position:8% center;
+background-origin:padding-box;
+background-repeat:no-repeat;
+background-size:25px 25px;
+border: 1px solid #773f9b;
+}
+
+.quicksignup-button a {
+  color: #773f9b;
+  text-decoration: none;
+}
 
 
 
