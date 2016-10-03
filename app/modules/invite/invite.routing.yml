@@ -1,0 +1,21 @@
+invite.invite_accept_accept:
+  path: '/invite/accept/{invite}'
+  defaults:
+    _controller: '\Drupal\invite\Controller\InviteAccept::accept'
+    _title: 'accept'
+  requirements:
+    _permission: 'access content'
+    reg_code: ^[a-zA-Z0-9]+
+  options:
+    parameters:
+      invite:
+        type: reg_code
+invite.invite_config:
+  path: '/admin/config/invite/invite_config'
+  defaults:
+    _form: '\Drupal\invite\Form\InviteConfig'
+    _title: 'Invite Config'
+  requirements:
+    _permission: 'access administration pages'
+  options:
+    _admin_route: TRUE

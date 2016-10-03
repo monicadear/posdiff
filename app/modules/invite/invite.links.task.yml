@@ -1,0 +1,4 @@
+invite_type.settings_tab:
+  route_name: invite_type.settings
+  title: 'Settings'
+  base_route: invite_type.settings

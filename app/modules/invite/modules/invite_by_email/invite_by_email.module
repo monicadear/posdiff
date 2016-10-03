@@ -1,0 +1,110 @@
+<?php
+/**
+ * @file
+ * Contains invite_by_email.module.
+ */
+
+/**
+ * Implements hook_form_alter().
+ */
+function invite_by_email_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  if ($form_id == 'invite_type_add_form' || $form_id == 'invite_type_edit_form') {
+    $invite_type = $form_state->getFormObject()->getEntity();
+    $data = unserialize($invite_type->getData());
+
+    $invite_by_email_settings = !empty($data) ? $data : array(
+      'use_default' => TRUE,
+      'subject_editable' => '',
+      'html_email' => '',
+      'mail_subject' => '',
+      'mail_template' => '',
+    );
+
+    $form['invite_by_email'] = array(
+      '#type' => 'fieldset',
+      '#title' => t('Invite by e-mail message settings'),
+      '#tree' => TRUE,
+      '#attributes' => array(
+        'class' => array(
+          'invite-by-email-wrapper',
+        ),
+      ),
+      '#states' => array(
+        'invisible' => array(
+          ':input[name="send_method[invite_by_email]"]' => array('checked' => FALSE),
+        )
+      ),
+    );
+
+    $form['invite_by_email']['use_default'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Use default settings'),
+      '#default_value' => $invite_by_email_settings['use_default'],
+      '#states' => array(
+        'invisible' => array(
+          ':input[name="invite_by_email"]' => array('!value' => 'invite_by_email'),
+        ),
+      ),
+    );
+
+    $form['invite_by_email']['subject_editable'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Editable subject'),
+      '#description' => t('Choose whether users should be able to customize the subject.'),
+      '#default_value' => $invite_by_email_settings['subject_editable'],
+      '#states' => array(
+        'invisible' => array(
+          ':input[name="invite_by_email[use_default]"]' => array('checked' => TRUE),
+        ),
+      ),
+    );
+
+    $form['invite_by_email']['html_email'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('HTML email'),
+      '#description' => t('Send HTML emails. WARNING: This option has security implications! Give to trusted users only.'),
+      '#default_value' => $invite_by_email_settings['html_email'],
+      '#states' => array(
+        'invisible' => array(
+          ':input[name="invite_by_email[use_default]"]' => array('checked' => TRUE),
+        ),
+      ),
+    );
+
+    $form['invite_by_email']['help'] = array(
+      '#type' => 'container',
+      'help' => array(
+        '#markup' => t('You may update the default subject and body for all invites on the <a href="@fields_path">fields edit page</a>.', array('@fields_path' => '/admin/structure/invite/settings/fields')),
+      ),
+      '#states' => array(
+        'invisible' => array(
+          ':input[name="invite_by_email[use_default]"]' => array('checked' => TRUE),
+        ),
+      ),
+    );
+
+    // Put our submit in top of list to ensure, that values will be added to 'data'
+    array_unshift($form['actions']['submit']['#submit'], 'invite_by_email_form_invite_type_form_submit');
+  }
+}
+
+/**
+ * Submit handler for invite types form.
+ *
+ * @param $form
+ * @param $form_state
+ */
+function invite_by_email_form_invite_type_form_submit(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+  $form_state->setValue('data', $form_state->getValue('invite_by_email'));
+}
+
+/**
+ * Implements hook_theme().
+ */
+function invite_by_email_theme($existing, $type, $theme, $path) {
+  return array(
+    'invite_by_email' => array(
+      'variables' => array('body' => NULL),
+    ),
+  );
+}

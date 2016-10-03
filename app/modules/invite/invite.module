@@ -1,0 +1,40 @@
+<?php
+/**
+ * @file
+ * Contains invite.module
+ */
+
+/**
+ * Validity constants.
+ */
+define('INVITE_VALID', 1);
+define('INVITE_WITHDRAWN', 2);
+define('INVITE_USED', 3);
+define('INVITE_EXPIRED', 4);
+
+use Drupal\Core\Entity\Entity;
+use Drupal\invite\Entity\Invite;
+
+/**
+ * Implements hook_ENTITY_TYPE_insert().
+ */
+function invite_user_insert(Drupal\Core\Entity\EntityInterface $account) {
+  if (!empty($_SESSION['invite_code'])) {
+    // Update invite when user accepts.
+    $id = Drupal::entityQuery('invite')
+      ->condition('reg_code', $_SESSION['invite_code'])
+      ->execute();
+    $invite = Invite::load(reset($id));
+    $invite->setInvitee($account);
+    $invite->setJoined(REQUEST_TIME);
+    $invite->setStatus(INVITE_USED);
+    $invite->save();
+    unset($_SESSION['invite_code']);
+    // Add target role to user.
+    $data = unserialize(\Drupal::config('invite.invite_type.' . $invite->get('type')->value)->get('data'));
+    if ($data['target_role'] != '0') {
+      $account->addRole($data['target_role']);
+      $account->save();
+    }
+  }
+}
