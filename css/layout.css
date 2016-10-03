@@ -227,8 +227,7 @@ ul#nav li.current a { color: #1E732D; }
 #connectmethods {
   display: block;
   clear: both;
-  width: 520px;
-  border: 1px solid blue;
+  width: 560px;
   margin: 0 auto 0 auto;
 }
 
@@ -259,7 +258,7 @@ border: 1px solid #0080ff;
 .send-a-text-button {
 display: inline-block;
 background:#fff;
-width:132px;
+width:122px;
 font-size:14px;
 text-align:right;
 color:#0084ff;
