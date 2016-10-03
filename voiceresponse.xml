@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Response>
 <Say voice="alice">
-Thanks for the call. Go to PosDiff dot com for more information.
+Thanks for the call. If you want to connect, please visit monica s flores.com.
 </Say>
 <Pause length="1"/>
 <Say voice="alice">
-Let us know if we can help you in any way during your development.
-</Say>
+Thanks so much for reaching out. The best way to send a message is to text 213 216 0305. Text Monica at 213 216 0305.</Say>
+<Pause length="1"/>
+<Say voice="alice">
+Or, reach out through twitter at monica s flores.</Say>
 <Pause length="2"/>
 <Say voice="alice">
-Goodbye.</Say>
+See you online. Goodbye.</Say>
 </Response>
