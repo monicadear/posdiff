@@ -45,13 +45,13 @@
 
    <!-- Intro Section
    ================================================== -->
-   <section id="about">
+   <section id="intro">
 
    	<header class="row">	 
 
 			<div id="logo" >
 				<a href="/" >
-                 <img src="images/posdifflogo.001.jpeg" alt="posdiff">                  
+                 <img src="images/posdiff.gif" alt="posdiff">                  
               </a>					
 			</div>
 
@@ -73,9 +73,80 @@
 
    	</header> <!-- Header End -->   	
 
-   
+   	<div  id="main" class="row">
+
+	   	<div class="twelve columns">
+	   			
+	   		<h1>Make a Positive Difference</h1>
+
+	   		<p>~ connect your daily actions to your overall life goals ~<br />
+	   		~ join a community dedicated to your success ~<br />
+	   		~ achieve your dreams ~<br />
+	   		~ practice daily gratitude for the gift of your life ~</p>
+
+<h5>Time Left Until Launch</h5>
+
+	   		<div id="counter" class="cf">
+	   			<span>134 <em>days</em></span> 
+ 					<span>12 <em>hours</em></span>
+					<span>50 <em>minutes</em></span>
+ 					<span>33 <em>seconds</em></span> 
+   			</div>			
 
 
+   			<!-- Connect via Messenger or SMS -->
+<div id="connectmethods">
+
+	<div class="fb-message-button">
+	<a href="https://www.messenger.com/t/1021591304621593">Message PosDiff</a>
+	</div>
+
+
+	<div class="send-a-text-button">
+	<a href="sms:/2136210305">Send SMS</a>
+	</div>
+
+
+	<div class="quicksignup-button">
+	<a href="app/user/register">Beta test</a>
+	</div>
+
+
+</div>
+   			<!-- End Connect via Messenger or SMS -->
+
+
+
+   			<!-- Begin MailChimp Signup Form -->
+	         <div id="mc_embed_signup">
+	         <h4>Remind Me!</h4>
+	            <form action="https://monicasflores.us7.list-manage.com/subscribe/post?u=23546c7190174378b65cc3f37&amp;id=6a0179c839" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+	                  
+	               <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
+	               
+	               <div style="position: absolute; left: -5000px;"><input type="text" name="b_cdb7b577e41181934ed6a6a44_e65110b38d" value=""></div>
+	               
+	               <!-- <div class="clear"> --><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"><!-- </div> -->
+	               
+	          	</form>
+	         </div>
+
+	         <ul class="social">
+	            <li><a href="http://facebook.com/monicasflores1"><i class="fa fa-facebook"></i></a></li>
+	            <li><a href="http://twitter.com/monicasflores"><i class="fa fa-twitter"></i></a></li>
+	            <li><a href="http://linkedin.com/in/monicaflores"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
+
+         </div> 
+
+      </div> <!-- main end -->    	
+
+   </section> <!-- end intro section -->
+
+
+   <!-- About Section
+   ================================================== -->
+   <section id="about">
 
       <div class="row section-header">
 
@@ -91,32 +162,6 @@
 	         social justice, and technology.<br />Makers, builders, founders, and entrepreneurs<br />
 	         who are making a positive difference. 
 	         </p>
-
-
-
-   			<!-- Connect via Messenger or SMS -->
-<div id="connectmethods">
-
-	<div class="fb-message-button">
-	<a href="https://www.messenger.com/t/1021591304621593" class="fb-message-button-link">Message PosDiff</a>
-	</div>
-
-
-	<div class="send-a-text-button">
-	<a href="sms:/2136210305" class="send-a-text-button-link">Send SMS</a>
-	</div>
-
-
-	<div class="quicksignup-button">
-	<a href="app/user/register" class="quicksingup-button-link">Beta test</a>
-	</div>
-
-
-</div>
-   			<!-- End Connect via Messenger or SMS -->
-
-
-
 
          </div>
 
