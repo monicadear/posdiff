@@ -235,15 +235,11 @@ ul#nav li.current a { color: #1E732D; }
 }
 
 .fb-message-button {
-float: right;
-display: inline-block;
 background:#fff;
-width:172px;
 font-size:14px;
-text-align:right;
 color:#000;
-margin:6px 5px 5px 5px;
-padding:10px 10px 12px 5px;
+margin:0 auto;
+padding:10px 8px 12px 55px;
 border-radius:3px;
 background-image:url("../images/messengerlogo.png");
 background-position:8% center;
@@ -267,15 +263,11 @@ a.fb-message-button-link:hover
 
 
 .send-a-text-button {
-float: right;
-display: inline-block;
 background:#fff;
-width:122px;
 font-size:14px;
-text-align:right;
 color:#000;
-margin:6px 5px 5px 5px;
-padding:10px 10px 12px 5px;
+margin:0 auto;
+padding:10px 8px 12px 55px;
 border-radius:3px;
 background-image:url("../images/sms.png");
 background-position:8% center;
@@ -298,15 +290,11 @@ a.send-a-text-button-link:hover
 }
 
 .quicksignup-button {
-float: right;
-display: inline-block;
 background:#fff;
-width:112px;
 font-size:14px;
-text-align:right;
 color:#000;
-margin:6px 5px 5px 5px;
-padding:10px 10px 12px 5px;
+margin:0 auto;
+padding:10px 8px 12px 55px;
 border-radius:3px;
 background-image:url("../images/signupme.png");
 background-position:8% center;
