@@ -61,6 +61,7 @@ dfn {
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
+  text-align: center;
 }
 mark {
   background: #ff0;
@@ -4259,7 +4260,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   font-size: 75%;
   font-weight: bold;
   line-height: 1;
-  color: #ffffff;
+  color: #333333;
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
@@ -4267,7 +4268,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 }
 .label[href]:hover,
 .label[href]:focus {
-  color: #ffffff;
+  color: #333333;
   text-decoration: none;
   cursor: pointer;
 }
